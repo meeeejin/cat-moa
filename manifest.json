@@ -1,0 +1,29 @@
+{
+    "name": "CatMoa",
+    "version": "0.0.1",
+    "description": "Chrome extension that helps you get information about cat supplies more easily",
+    "permissions": [
+        "tabs",
+        "storage",
+        "unlimitedStorage",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "icons": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "64": "images/icon-64.png",
+        "128": "images/icon-128.png"
+    },
+    "browser_action": {
+        "default_title": "Cat Moa Control Panel",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://www.catpre.com/*"],
+            "js": ["scripts/content-script.js"]
+        }
+    ],
+    "manifest_version": 2
+}
