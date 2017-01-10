@@ -22,7 +22,11 @@
     "content_scripts": [
         {
             "matches": ["http://www.catpre.com/*"],
-            "js": ["scripts/content-script.js"]
+            "js": ["scripts/content-script.js"],
+            "css": ["content.css"],
+            "run at": "document_end",
+            "all_frames": true
+
         }
     ],
     "manifest_version": 2
